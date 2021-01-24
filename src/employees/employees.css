@@ -1,0 +1,17 @@
+.employee-container{
+    background-color: rgb(191, 228, 245);
+    margin:30px;
+    padding: 40px;
+}
+.employee-container input{
+    margin: 10px;
+}
+.employee-container button{
+    width: 300px;
+    margin: 10px;
+}
+.delete-button{
+    background: transparent;
+    border: none;
+    outline: none;
+}

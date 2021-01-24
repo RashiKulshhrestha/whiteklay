@@ -1,0 +1,12 @@
+.navbar navbar-light navbar navbar-expand-lg navbar-light{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar-nav{
+    margin: 20px;
+    padding: 20px;
+}
+.navbar-container a{
+    margin-left: 20px;
+}
