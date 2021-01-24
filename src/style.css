@@ -1,0 +1,29 @@
+.container{
+    background-color: rgb(191, 228, 245);
+    margin-bottom:30px;
+    padding: 40px;
+}
+.container input{
+    margin: 10px;
+}
+.container button{
+    width: 300px;
+    margin: 10px;
+}
+.delete-button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Home */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+  }
+  .home header{
+    font-size: 58px;
+    font-weight: 800;
+  }

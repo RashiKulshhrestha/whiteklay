@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, Button } from "react-bootstrap";
 import EmpList from "./EmpList";
-import "./employees.css";
+
 export default class Employees extends React.Component{
     constructor(props){
         super(props);
@@ -11,7 +11,16 @@ export default class Employees extends React.Component{
             email : "",
             role : "",
             organisation : "",
-            empList : []
+            empList : [
+                {
+                    eid : "ABC123",
+                    name : "John Williams",
+                    email : "john@xyz.com",
+                    role : "Web Developer",
+                    organisation : "XYZ Limited",
+            
+                }
+            ]
         }
     }
     handleChange = (e) =>{
@@ -31,7 +40,13 @@ export default class Employees extends React.Component{
         this.setState({
             empList: [...this.state.empList,addDetails]
         })
-        //console.log(this.state.empList);
+        this.setState({
+            eid : "",
+            name : "",
+            email : "",
+            role : "",
+            organisation : ""
+        })
     }
     handleDelete = (id1) =>{
         let list = this.state.empList.filter((flist,index) => index !== id1
@@ -44,12 +59,13 @@ export default class Employees extends React.Component{
     render(){
         return(
             <>
-                <form  className="employee-container" onSubmit={this.handleSubmit}>
+                <form  className="container" onSubmit={this.handleSubmit}>
                     <div className="row">
                         <div className="col">
                             <input 
                                 type="text"
                                 name = "eid"
+                                value ={this.state.eid}
                                 required
                                 className="form-control"
                                 onChange ={this.handleChange}
@@ -59,6 +75,7 @@ export default class Employees extends React.Component{
                             <input 
                                 type="text"
                                 name = "name"
+                                value = {this.state.name}
                                 required
                                 className="form-control"
                                 onChange ={this.handleChange}
@@ -68,6 +85,7 @@ export default class Employees extends React.Component{
                             <input 
                                 type="text"
                                 name = "role"
+                                value ={this.state.role}
                                 required
                                 className="form-control"
                                 onChange ={this.handleChange}
@@ -79,6 +97,7 @@ export default class Employees extends React.Component{
                             <input 
                                 type="email"
                                 name = "email"
+                                value = {this.state.email}
                                 required
                                 className="form-control"
                                 onChange ={this.handleChange}
@@ -88,6 +107,7 @@ export default class Employees extends React.Component{
                             <input 
                                 type="text"
                                 name = "organisation"
+                                value ={this.state.organisation}
                                 required
                                 className="form-control"
                                 onChange ={this.handleChange}
